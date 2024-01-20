@@ -1,0 +1,10 @@
+{
+  "imports": {
+    "@src/": "./src/"
+  },
+  "tasks": {
+    "dev": "deno run --lock=deno.lock --allow-net --watch src/server.ts",
+    "dl-deps:update-lock": "deno cache --lock=deno.lock --lock-write src/deps.ts",
+    "dl-deps:reload": "deno cache --reload --lock=deno.lock src/deps.ts"
+  }
+}
