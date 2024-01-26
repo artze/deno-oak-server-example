@@ -13,6 +13,7 @@ app.use(async (ctx, next) => {
       ctx.response.status = 400;
       ctx.response.body = err.issues;
     } else {
+      ctx.response.status = 500;
       throw err;
     }
   }
